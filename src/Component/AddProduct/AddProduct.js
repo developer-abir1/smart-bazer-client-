@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import './AddProduct.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faCloudDownloadAlt, faPlus, faWrench } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 
 const AddProduct = () => {
@@ -19,7 +19,7 @@ const AddProduct = () => {
       image: imageURL
 
     };
-    fetch("http://localhost:4500/addProducts",{
+    fetch("https://cryptic-plateau-96253.herokuapp.com/addProducts",{
       method:"POST",
       headers:{'Content-Type': 'application/json'},
       body: JSON.stringify(addData)
@@ -72,9 +72,13 @@ const handleUploadImage = e =>{
 
 
                     <p>  Upload Image</p>
-                    <input name="" type="file" onChange={handleUploadImage} />
-                    <br />
-                    <br />
+                    <input id="uploadImg" name="" type="file" onChange={handleUploadImage} />
+                   
+                    <label for="uploadImg">
+                    <FontAwesomeIcon icon={faCloudDownloadAlt} />  Upload an image
+                    </label>
+                    <br/>
+                    <br/>
 
                     <button className="btn btn-success" type="submit"> Upload</button>
                   </div>
@@ -82,7 +86,9 @@ const handleUploadImage = e =>{
               </div>
 
             </form>
+        
           </div>
+        
         </div>
       </div>
     </div>

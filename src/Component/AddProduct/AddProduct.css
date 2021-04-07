@@ -1,64 +1,95 @@
-.productManger{
+.productManger {
     display: flex;
-    
 }
-.btnField{
+
+.btnField {
     width: 30%;
     height: 800px;
     background-color: rgb(1, 26, 41);
     padding: 20px;
-  
 }
-.linkBtn{
+
+.linkBtn {
     margin-top: 50px;
 }
-.btnField h5:hover{
-  background-color: rgba(165, 164, 164, 0.719);
+
+.btnField h5:hover {
+    background-color: rgba(165, 164, 164, 0.719);
 }
+
 .productItem {
     margin-top: 60px;
     border: none;
     border-radius: 15px;
-    padding: 20px 25px;
+    padding: 20px 180px;
     margin-left: 0px;
-    margin-bottom:400px;
+    margin-bottom: 400px;
     background-color: rgb(255, 255, 255);
 }
-.productItem input{
+
+.productItem input {
     border: none;
-    border-bottom: 1px solid rgb(47, 42, 42); 
+    border-bottom: 1px solid rgb(47, 42, 42);
     border-radius: 5px;
     padding: 5px 120px;
-
 }
-form{
+
+form {
     display: grid;
 }
-.addProduct{
-    background-color:  rgba(159, 230, 241, 0.281);
+
+.addProduct {
+    background-color: rgba(159, 230, 241, 0.281);
 }
-.uploadBtn{
+
+.uploadBtn {
     display: flex;
     gap: 20px;
-    
 }
-.uploadImg{
+
+.uploadImg {
     margin-top: 20px;
 }
-.tableItem{
+
+.tableItem {
     align-items: center;
 }
-.productItems{
+
+.productItems {
     align-items: center;
     border-radius: 15px;
-    margin: ;
     background-color: rgb(255, 255, 255);
 }
 
-.addProducts{
-    background-color:  rgba(159, 230, 241, 0.281);
+.addProducts {
+    background-color: rgba(159, 230, 241, 0.281);
 }
-.tablesItem th{
+
+.tablesItem th {
     padding: 20px;
     margin: 90px;
+}
+
+#uploadImg {
+    display: none;
+}
+
+label {
+    border: 1px solid green;
+    color: green;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+label:hover{
+ 
+    color: white;
+    background-color: green
+}
+h5{
+    margin: 30px;
 }

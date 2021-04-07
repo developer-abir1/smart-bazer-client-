@@ -15,6 +15,7 @@ import Login from './Component/Login/Login';
 import NotFound from './Component/NotFound/NotFound';
 import AddProduct from './Component/AddProduct/AddProduct';
 import ProductManager from './Component/ProductManger/ProductManager';
+import Naber from './Component/Header/Navber/Naber';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
        <Admin></Admin>
        </Route>
        <Route path="/login"> 
+       <Naber></Naber>
        <Login></Login>
        </Route>
        <Route path="/addProduct">

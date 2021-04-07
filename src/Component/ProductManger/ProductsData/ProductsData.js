@@ -4,8 +4,8 @@ import './ProductsData.css'
 const ProductsData = (props) => {
     const { name, price } = props.pd
     return (
-        <div className="listItem">
-            <table class="table">
+        <div className="container">
+            <table class="table listItem">
              
                 <tbody>
                     <tr>

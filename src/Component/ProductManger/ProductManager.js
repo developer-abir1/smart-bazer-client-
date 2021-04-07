@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faSearch, faSquare, faThumbsDown, faWrench } from '@fortawesome/free-solid-svg-icons'
 import ProductsData from './ProductsData/ProductsData';
+import './ProductManager.css'
 
 const ProductManager = () => {
     const [productsData, setProductsData] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:4500/products`
+        const url = `https://cryptic-plateau-96253.herokuapp.com/products`
         fetch(url)
             .then(res => res.json())
             .then(data => setProductsData(data))
@@ -25,9 +26,9 @@ const ProductManager = () => {
                         <Link style={{ textDecoration: "none", color: "white" }} to="/addProduct">    <h5> <FontAwesomeIcon icon={faPlus} />   ADD Product</h5> </Link>
                     </div>
                 </div>
-                <div className="addProducts">
+                <div className=" ">
                     <h1>Manage Products</h1>
-                    <div className="productItems">
+                    <div className="listItem">
                         <table class="table">
                             <thead>
                                 <tr>
