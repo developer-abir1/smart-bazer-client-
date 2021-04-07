@@ -1,0 +1,14 @@
+.searchBtn input{
+  padding: 5px 150px;
+  border: 1px solid gray;
+}
+.searchBtn button{
+    padding: 5px 70px;
+}
+.searchBtn{
+    margin-top: 100px;
+}
+.productsItem{
+  margin-top: 40px;
+ 
+}

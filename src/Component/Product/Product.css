@@ -1,0 +1,12 @@
+.products{
+    margin: 47px;
+    text-align: center;
+    align-items: center;
+
+}
+.productCard img{
+  padding: 30px;
+}
+.productCard:hover{
+    box-shadow: 5px 5px 10px gray;
+}

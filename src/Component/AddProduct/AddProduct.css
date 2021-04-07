@@ -1,0 +1,64 @@
+.productManger{
+    display: flex;
+    
+}
+.btnField{
+    width: 30%;
+    height: 800px;
+    background-color: rgb(1, 26, 41);
+    padding: 20px;
+  
+}
+.linkBtn{
+    margin-top: 50px;
+}
+.btnField h5:hover{
+  background-color: rgba(165, 164, 164, 0.719);
+}
+.productItem {
+    margin-top: 60px;
+    border: none;
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-left: 0px;
+    margin-bottom:400px;
+    background-color: rgb(255, 255, 255);
+}
+.productItem input{
+    border: none;
+    border-bottom: 1px solid rgb(47, 42, 42); 
+    border-radius: 5px;
+    padding: 5px 120px;
+
+}
+form{
+    display: grid;
+}
+.addProduct{
+    background-color:  rgba(159, 230, 241, 0.281);
+}
+.uploadBtn{
+    display: flex;
+    gap: 20px;
+    
+}
+.uploadImg{
+    margin-top: 20px;
+}
+.tableItem{
+    align-items: center;
+}
+.productItems{
+    align-items: center;
+    border-radius: 15px;
+    margin: ;
+    background-color: rgb(255, 255, 255);
+}
+
+.addProducts{
+    background-color:  rgba(159, 230, 241, 0.281);
+}
+.tablesItem th{
+    padding: 20px;
+    margin: 90px;
+}
