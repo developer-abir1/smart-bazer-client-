@@ -2,23 +2,30 @@ import React from 'react';
 import './ProductsData.css'
 
 const ProductsData = (props) => {
-    const { name, price } = props.pd
+    const { _id, wight, name, price } = props.pd
+
+    const handleDelete = () =>{
+     const url = `https://cryptic-plateau-96253.herokuapp.com/delete/${_id}`
+     fetch(url,{
+           method:'DELETE'
+     })
+     .then(res => res.json())
+     .then(result => {
+         console.log("delete successfully" , result)
+     })
+    }
     return (
-        <div className="container">
-            <table class="table listItem">
-             
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
+                     <tbody>
+                       <tr> 
                         <td> <strong>{name}</strong>  </td>
-                        <td>{price}</td>
-                        <td><button className="btn btn-success">Update</button> </td>
-                        <td><button  className="btn btn-danger">Delete</button> </td>
+                        <td>$ {price}</td>
+                        <td> {wight}  </td>
+                        <td><button className="btn btn-outline-success">Update</button> </td>
+                        <td><button onClick={handleDelete} className="btn btn-outline-danger">DELETE</button> </td>
+                        
                     </tr>
-                    
                 </tbody>
-            </table>
-        </div>
+           
     );
 };
 

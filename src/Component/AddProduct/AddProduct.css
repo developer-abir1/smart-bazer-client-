@@ -3,10 +3,27 @@
 }
 
 .btnField {
-    width: 30%;
+    width: 40%;
     height: 800px;
     background-color: rgb(1, 26, 41);
     padding: 20px;
+}
+.fromFiled input{
+    border: none;
+    border-top:1px solid grey;
+    padding: 5px 20px;
+    border-radius: 5px;
+    
+
+}
+form{
+    display: grid;
+}
+.fromFiled{
+    background-color: rgb(246, 242, 242);
+    margin: 20px;
+    padding: 20px;
+    border-radius:15px ;
 }
 
 .linkBtn {
@@ -17,26 +34,7 @@
     background-color: rgba(165, 164, 164, 0.719);
 }
 
-.productItem {
-    margin-top: 60px;
-    border: none;
-    border-radius: 15px;
-    padding: 20px 180px;
-    margin-left: 0px;
-    margin-bottom: 400px;
-    background-color: rgb(255, 255, 255);
-}
 
-.productItem input {
-    border: none;
-    border-bottom: 1px solid rgb(47, 42, 42);
-    border-radius: 5px;
-    padding: 5px 120px;
-}
-
-form {
-    display: grid;
-}
 
 .addProduct {
     background-color: rgba(159, 230, 241, 0.281);
@@ -92,4 +90,10 @@ label:hover{
 }
 h5{
     margin: 30px;
+}
+.managePd{
+    margin: 20px;
+    padding: 30px;
+    background: rgb(246, 245, 245);
+    border-radius: 20px;
 }

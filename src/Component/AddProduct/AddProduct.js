@@ -5,6 +5,8 @@ import './AddProduct.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudDownloadAlt, faPlus, faWrench } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
+
 
 const AddProduct = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -14,6 +16,7 @@ const AddProduct = () => {
  
   const onSubmit = data => {
     const addData ={
+      wight: data.wight,
       name: data.name,
       price: data.price,
       image: imageURL
@@ -52,39 +55,35 @@ const handleUploadImage = e =>{
           </div>
         </div>
 
-        <div className="addProduct">
+        <div className="">
           <h1>AddProduct</h1>
-          <div className="input-group productItem">
+          <div className="">
 
             <form onSubmit={handleSubmit(onSubmit)}>
           
-              <div className="uploadBtn">
-                <div className="row">
-                  <div className="col-md-6">
-                    <p>ADD Product</p>
-                    <input   placeholder="Enter your Product name"   {...register("name")}   />
-                    <p>Add Price</p>
-                    <input  placeholder="Enter price"  {...register("price")}   />
+              <div className="row fromFiled">
+                  <div className="col-6 ">
+                  <p>ADD Product</p>
+                    <input   type="text" placeholder="Enter your Product name"   {...register("name")}   />
                   </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="uploadImg">
-
-
-                    <p>  Upload Image</p>
+                  <div className="col-6 ">
+                    <p>ADD Wight</p>
+                  <input type="text" placeholder="Enter Wight"  {...register("wight")}   />
+                  </div>
+                  <div className="col-6">
+                  <p>Add Price</p>
+                    <input  type="text"  placeholder="Enter price"  {...register("price")}   />
+                  </div>
+                  <div className="col-6">
+                  <p>  Upload Image</p>
                     <input id="uploadImg" name="" type="file" onChange={handleUploadImage} />
-                   
                     <label for="uploadImg">
                     <FontAwesomeIcon icon={faCloudDownloadAlt} />  Upload an image
                     </label>
-                    <br/>
-                    <br/>
-
-                    <button className="btn btn-success" type="submit"> Upload</button>
                   </div>
-                </div>
-              </div>
-
+                  </div>
+                  
+              <Button style={{width: '5rem'}} className="ms-auto" type="submit" variant="primary">Upload</Button>
             </form>
         
           </div>

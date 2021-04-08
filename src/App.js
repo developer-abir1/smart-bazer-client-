@@ -16,45 +16,62 @@ import NotFound from './Component/NotFound/NotFound';
 import AddProduct from './Component/AddProduct/AddProduct';
 import ProductManager from './Component/ProductManger/ProductManager';
 import Naber from './Component/Header/Navber/Naber';
+import OrderData from './Component/OrderData/OrderData';
+import { createContext, useState } from 'react';
+import PrivetRoute from './Component/PrivetRoute/PrivetRoute';
+import ProductsData from './Component/ProductManger/ProductsData/ProductsData';
+import Product from './Component/Product/Product';
+
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
+<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
    <Router>
      <Switch>
        <Route exact path="/">
-         
          <Home></Home>
        </Route>
        <Route path="/home">
          <Home></Home>
        </Route>
-       <Route path="/order"> 
+       <PrivetRoute path="/order"> 
+       
        <Header></Header>
          <Order></Order>
-       </Route>
+       </PrivetRoute>
        <Route path="/deals">
-         <Header></Header> 
          <Deals></Deals>
        </Route>
-       <Route path="/admin"> 
+       <PrivetRoute path="/admin"> 
        <Admin></Admin>
-       </Route>
+       </PrivetRoute>
        <Route path="/login"> 
-       <Naber></Naber>
+       <Header></Header>
        <Login></Login>
        </Route>
+      
        <Route path="/addProduct">
          <AddProduct></AddProduct>
        </Route>
        <Route path="/productManger">
          <ProductManager></ProductManager>
        </Route>
+       <PrivetRoute path="/orderData/:orderId">
+         <Naber></Naber>
+          <OrderData></OrderData>
+       </PrivetRoute>
+       
+       
 
        <Route path="*"> 
      <NotFound></NotFound>
        </Route>
      </Switch>
    </Router>
+   </UserContext.Provider>
   );
 }
 
